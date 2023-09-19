@@ -1,36 +1,45 @@
 import React from 'react';
-import home1 from '../img/home1.png'
-import { About,Description, Hide, Image } from '../styles';
-
+import { About, Description, Image } from '../styles';
+import styled from 'styled-components';
+//Images
+import homeImg1 from '../img/home1.png';
+import { titleAnim, fade } from '../animation';
+import { motion } from 'framer-motion';
 
 
 const AboutSection = () => {
-    return(
-        <About>
-            <Description>
-                <div className='title'>
-                    <Hide>
-                        <h2> We work to make</h2>
-                    </Hide>
-                    <Hide>
-                        <h2>your <span>dreams </span> come</h2>
-                    </Hide>
-                    <Hide>
-                        <h2>true.</h2>
-                    </Hide>
-                    <div>
-                        <p>Contact us for any photography or videography ideas that you have. We have professionals with amazing skills.</p>
-                        <button>Contact us</button>
-                    </div>
-                </div>
-            </Description>
-            <Image>
-                <img src={home1} alt='camera'></img>
-            </Image>
-        </About>
-    )
-}
+  return (
+    <About>
+      <Description>
+        <div className="title">
+          <Hide>
+            <motion.h2 variants={titleAnim}>We work to make</motion.h2>
+          </Hide>
+          <Hide>
+            <motion.h2 variants={titleAnim}>
+              your <span>dreams</span> come
+            </motion.h2>
+          </Hide>
+          <Hide>
+            <motion.h2 variants={titleAnim}>true.</motion.h2>
+          </Hide>
+        </div>
+        <motion.p variants={fade}>
+          Contact us for any photography or videography ideas that you have. We
+          have professionals with amazing skills to help you achieve it.
+        </motion.p>
+        <motion.button variants={fade}>Contact Us</motion.button>
+      </Description>
+      <Image>
+        <motion.img src={homeImg1}  />
+      </Image>
 
+    </About>
+  );
+};
 
+const Hide = styled.div`
+  overflow: hidden;
+`;
 
 export default AboutSection;

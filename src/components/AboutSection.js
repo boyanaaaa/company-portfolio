@@ -3,9 +3,9 @@ import { About, Description, Image } from '../styles';
 import styled from 'styled-components';
 //Images
 import homeImg1 from '../img/home1.png';
-import { titleAnim, fade } from '../animation';
+import { titleAnim, fade, photoAnimation } from '../animation';
 import { motion } from 'framer-motion';
-
+import { Wave } from './Wave';
 
 const AboutSection = () => {
   return (
@@ -31,8 +31,9 @@ const AboutSection = () => {
         <motion.button variants={fade}>Contact Us</motion.button>
       </Description>
       <Image>
-        <motion.img src={homeImg1}  />
+        <motion.img variants={photoAnimation} src={homeImg1}   />
       </Image>
+      <Wave />
 
     </About>
   );

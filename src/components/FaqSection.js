@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 import { About } from '../styles';
 import Toggle from './Toggle';
-import { LayoutGroup, motion } from "framer-motion"
+import { LayoutGroup } from "framer-motion"
 
 
 const FaqSection = () => {

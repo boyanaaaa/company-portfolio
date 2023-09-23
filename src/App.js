@@ -6,7 +6,7 @@ import Nav from './components/Nav';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import GlobalStyle from './components/GlobalStyled';
 import { AnimatePresence } from 'framer-motion';
-
+import ScrollTop from './components/ScrollTop';
 
 
 function App() {
@@ -20,10 +20,10 @@ function App() {
             <Routes location={location} key={location.pathname} >
                 <Route path="/" element={<AboutUs />} />
                 <Route path="/work" element={<OurWork />} /> 
-                <Route path="/constact" element={<ContactUs />} />
+                <Route path="/contact" element={<ContactUs />} />
             </Routes>
         </AnimatePresence>
-
+      <ScrollTop />
     </div>
   );
 }

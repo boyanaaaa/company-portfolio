@@ -24,6 +24,12 @@ export const Description = styled.div`
         color: black;
         padding: 1rem;
     }
+    @meadia (max-width: 1300px){
+        padding: 0;
+        button{
+            margin: 2rem 0rem 5rem 2rem;
+        }
+    }
 `;
 
 export const Image = styled.div`
